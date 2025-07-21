@@ -7,7 +7,7 @@ Initially, the goal was just to understand how compilers function from the groun
 
 [**Checkout the article on Medium**](https://medium.com/@avinash592004/baking-your-own-cookie-build-a-tiny-programming-language-compiler-from-scratch-8e5da014725c)
 
-[**Checkout Cookie Playground**](https://alphastar-avi.github.io/Cookie-lang/) *(under development, requires ngrok URL for now)*
+[**Checkout Cookie Playground**](https://alphastar-avi.github.io/Cookie-lang/) *( under development, requires ngrok URL for now )*
 
 <img width="1361" alt="Screenshot 2025-06-11 at 7 26 29 PM" src="https://github.com/user-attachments/assets/981ad6c8-babe-41f3-8cb1-577a685795e7" />
 
