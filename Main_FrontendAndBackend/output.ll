@@ -1,37 +1,28 @@
 ; ModuleID = 'GoofyLang'
 source_filename = "GoofyLang"
 
-@.str_int = private constant [4 x i8] c"%d\0A\00"
-@strlit = private unnamed_addr constant [19 x i8] c"x is lesser than b\00", align 1
+@strlit = private unnamed_addr constant [6 x i8] c"hellp\00", align 1
 @.str_string = private constant [4 x i8] c"%s\0A\00"
 
 define i32 @main() {
 global:
-  %x = alloca i32, align 4
-  %b = alloca i32, align 4
-  %a = alloca i32, align 4
-  store i32 645, ptr %a, align 4
-  store i32 12943, ptr %b, align 4
-  %a1 = load i32, ptr %a, align 4
-  %b2 = load i32, ptr %b, align 4
-  %addtmp = add i32 %a1, %b2
-  %0 = call i32 (ptr, ...) @printf(ptr @.str_int, i32 %addtmp)
-  store i32 0, ptr %x, align 4
-  %readInt = call i32 @read_int()
-  store i32 %readInt, ptr %x, align 4
-  %x3 = load i32, ptr %x, align 4
-  %b4 = load i32, ptr %b, align 4
-  %cmptmp = icmp slt i32 %x3, %b4
-  br i1 %cmptmp, label %then, label %ifcont
+  %i = alloca i32, align 4
+  store i32 0, ptr %i, align 4
+  br label %loopcond
 
-then:                                             ; preds = %global
-  %1 = call i32 (ptr, ...) @printf(ptr @.str_string, ptr @strlit)
-  br label %ifcont
+loopcond:                                         ; preds = %loopbody, %global
+  %i1 = load i32, ptr %i, align 4
+  %loopcond2 = icmp slt i32 %i1, 10000000
+  br i1 %loopcond2, label %loopbody, label %afterloop
 
-ifcont:                                           ; preds = %then, %global
+loopbody:                                         ; preds = %loopcond
+  %0 = call i32 (ptr, ...) @printf(ptr @.str_string, ptr @strlit)
+  %inc = add i32 %i1, 1
+  store i32 %inc, ptr %i, align 4
+  br label %loopcond
+
+afterloop:                                        ; preds = %loopcond
   ret i32 0
 }
 
 declare i32 @printf(ptr, ...)
-
-declare i32 @read_int()
