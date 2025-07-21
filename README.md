@@ -22,7 +22,7 @@ Ensure you have the following installed:
 - **LLVM**: Version 19.0 or later
 - **Flex** and **Bison**
 - **GCC / G++**
-- **Docker** (optional, but let’s be real you’ll probably end up using it anyway)
+- **Docker** ( optional, but let’s be real you’ll probably end up using it anyway )
 
 ---
 
