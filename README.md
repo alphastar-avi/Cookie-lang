@@ -3,7 +3,7 @@
 
 It all started with C++. As we were learning language, we found ourselves wondering—how do compilers like GCC and Clang actually work? That curiosity led us to a simple yet ambitious idea: why not build a compiler ourselves?
 
-Initially, the goal was just to understand how compilers function from the ground up. But as we kept working, the project naturally evolved—not only were we building a compiler, but we were also designing a programming language. We wanted Cookie to be simple, intuitive, and easy to use, making it accessible to anyone interested in programming.
+Initially, the goal was just to understand how compilers function from the ground up. But as we kept working, the project naturally evolved—not only were we building a compiler, but we were also designing a programming language. We wanted Cookie to be simple, intuitive, and easy to use, making it accessible to anyone interested in programming...
 
 [**Checkout the article on Medium**](https://medium.com/@avinash592004/baking-your-own-cookie-build-a-tiny-programming-language-compiler-from-scratch-8e5da014725c)
 
